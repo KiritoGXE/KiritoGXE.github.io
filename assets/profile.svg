@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with animated gradient -->
+  <defs>
+    <linearGradient id="profileGradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8a2be2">
+        <animate attributeName="stop-color" values="#8a2be2; #68dcfd; #ff00ff; #8a2be2" dur="10s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#68dcfd">
+        <animate attributeName="stop-color" values="#68dcfd; #ff00ff; #8a2be2; #68dcfd" dur="10s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    <clipPath id="circleMask">
+      <circle cx="150" cy="150" r="140" />
+    </clipPath>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="150" cy="150" r="140" fill="url(#profileGradient)" />
+  
+  <!-- Tech-themed background pattern -->
+  <g opacity="0.3" clip-path="url(#circleMask)">
+    <rect x="50" y="50" width="20" height="20" fill="white">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4s" repeatCount="indefinite" />
+    </rect>
+    <rect x="80" y="80" width="15" height="15" fill="white">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite" />
+    </rect>
+    <rect x="120" y="60" width="25" height="25" fill="white">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="5s" repeatCount="indefinite" />
+    </rect>
+    <rect x="170" y="90" width="18" height="18" fill="white">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4.5s" repeatCount="indefinite" />
+    </rect>
+    <rect x="200" y="70" width="22" height="22" fill="white">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3.5s" repeatCount="indefinite" />
+    </rect>
+    <rect x="60" y="150" width="18" height="18" fill="white">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4.2s" repeatCount="indefinite" />
+    </rect>
+    <rect x="90" y="180" width="20" height="20" fill="white">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3.7s" repeatCount="indefinite" />
+    </rect>
+    <rect x="150" y="160" width="15" height="15" fill="white">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4.8s" repeatCount="indefinite" />
+    </rect>
+    <rect x="190" y="200" width="22" height="22" fill="white">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3.3s" repeatCount="indefinite" />
+    </rect>
+    <rect x="220" y="170" width="16" height="16" fill="white">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="5.2s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  
+  <!-- Silhouette -->
+  <path d="M150,70 C123,70 100,93 100,120 C100,147 120,170 150,170 C180,170 200,147 200,120 C200,93 177,70 150,70 Z M200,190 C185,205 170,210 150,210 C130,210 115,205 100,190 C85,220 75,250 75,280 L225,280 C225,250 215,220 200,190 Z" fill="#10121a" />
+</svg> 

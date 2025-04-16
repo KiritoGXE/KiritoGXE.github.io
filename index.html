@@ -13,233 +13,299 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- Aggiungi un favicon in /assets -->
-    <!-- <link rel="icon" href="assets/favicon.png"> -->
+    <link rel="stylesheet" href="css/animations.css" />
+    <!-- Aggiunto favicon -->
+    <link rel="icon" href="assets/favicon.svg">
   </head>
   <body>
-    <!-- Sidebar di Navigazione Fissa -->
-    <nav class="sidebar">
-      <div class="sidebar-header">
-        <!-- Potresti mettere un piccolo logo o icona qui -->
-        <!-- <img src="assets/logo_minimal.png" alt="Logo" class="sidebar-logo"> -->
-        <h3>Navigazione</h3>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="spinner-container">
+        <div class="spinner"></div>
+        <p>Caricamento...</p>
       </div>
-      <ul>
-        <li>
-          <a href="#home"><i class="fas fa-home icon"></i><span>Home</span></a>
-        </li>
-        <li>
-          <a href="#about"
-            ><i class="fas fa-user-astronaut icon"></i><span>Chi Sono</span></a
-          >
-        </li>
-        <li>
-          <a href="#projects"
-            ><i class="fas fa-rocket icon"></i><span>Progetti</span></a
-          >
-        </li>
-        <li>
-          <a href="#skills"
-            ><i class="fas fa-brain icon"></i><span>Skills</span></a
-          >
-        </li>
-        <li>
-          <a href="#contact"
-            ><i class="fas fa-envelope icon"></i><span>Contatti</span></a
-          >
-        </li>
-      </ul>
-      <div class="sidebar-footer">
-        <!-- Link Social (esempi) -->
-        <a
-          href="[IL TUO LINK GITHUB]"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          ><i class="fab fa-github"></i
-        ></a>
-        <a href="mailto:[LA TUA EMAIL]" aria-label="Email"
-          ><i class="fas fa-at"></i
-        ></a>
-        <!-- <a href="[LINK LINKEDIN]" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a> -->
+    </div>
+    
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-logo">
+          <a href="#home">
+            <img src="assets/favicon.svg" alt="Logo" class="logo-img float-slow">
+            <span>Diego Vincenzi</span>
+          </a>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        
+        <!-- Nav Links -->
+        <nav class="navbar-links">
+          <ul>
+            <li><a href="#home" class="nav-link"><i class="fas fa-home"></i><span>Home</span></a></li>
+            <li><a href="#about" class="nav-link"><i class="fas fa-user-astronaut"></i><span>Chi Sono</span></a></li>
+            <li><a href="#projects" class="nav-link"><i class="fas fa-rocket"></i><span>Progetti</span></a></li>
+            <li><a href="#skills" class="nav-link"><i class="fas fa-brain"></i><span>Skills</span></a></li>
+            <li><a href="#future" class="nav-link"><i class="fas fa-lightbulb"></i><span>Idee Future</span></a></li>
+            <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contatti</span></a></li>
+          </ul>
+        </nav>
+        
+        <!-- Social Links -->
+        <div class="navbar-social">
+          <a href="https://github.com/KiritoGXE" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:vincenzi.die@gmail.com" aria-label="Email">
+            <i class="fas fa-at"></i>
+          </a>
+          <a href="https://discord.gg/Enm3UbutEa" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+            <i class="fab fa-discord"></i>
+          </a>
+        </div>
       </div>
-    </nav>
+    </header>
 
     <!-- Contenuto Principale -->
     <main class="main-content">
       <!-- Sezione Home/Hero -->
       <section id="home" class="hero-section full-height">
+        <!-- Particles background -->
+        <canvas id="particles-js"></canvas>
+        
         <div class="hero-content animate-on-scroll fade-in">
-          <h1 class="glitch" data-text="Diego 'Kirito' Vincenzi">
-            Diego "Kirito" Vincenzi
+          <div class="hero-avatar">
+            <img src="assets/profile.svg" alt="Diego Vincenzi" class="hero-profile-pic">
+          </div>
+          <h1 class="shimmer-text" data-text="Diego Vincenzi">
+            Diego Vincenzi
           </h1>
-          <p class="subtitle animated-subtitle">
-            Studente IT | Sviluppatore MQL5 | Tech Enthusiast | Clan Leader
+          <div class="alias-tag">
+            <span class="glitch" data-text="Kirito">Kirito</span>
+          </div>
+          <p class="subtitle">
+            Studente IT | Sviluppatore Full-Stack | Clan Leader
           </p>
-          <a href="#about" class="cta-button"
-            >Scopri di più <i class="fas fa-arrow-down"></i
-          ></a>
+          <div class="hero-cta">
+            <a href="#about" class="cta-button glow">
+              Scopri di più <i class="fas fa-arrow-down"></i>
+            </a>
+          </div>
         </div>
-        <!-- Effetto background animato (opzionale, gestito in CSS) -->
-        <div class="animated-bg"></div>
       </section>
 
       <!-- Sezione About -->
       <section id="about" class="content-section">
-        <h2 class="section-title animate-on-scroll slide-in-left">
-          <span>Chi Sono</span>
-        </h2>
-        <div class="about-container">
-          <!-- <img src="assets/profile.jpg" alt="Foto Kirito" class="profile-pic animate-on-scroll fade-in"> -->
-          <div class="about-text animate-on-scroll slide-in-right">
-            <p>
-              Ciao! Sono Diego Vincenzi (online Kirito), studente al 4° anno di
-              Informatica all'IIS Copernico Carpeggiani (Ferrara). La tecnologia
-              è la mia più grande passione, dallo sviluppo software alla
-              gestione di infrastrutture.
-            </p>
-            <p>
-              Gestisco un server Proxmox personale come laboratorio per
-              sperimentare con VM, container, networking e servizi self-hosted.
-              Parallelamente, sono fondatore di <strong>GXE Devs</strong> e
-              Leader/Sherpa del clan <strong>GXE Republic</strong> su Destiny 2.
-            </p>
+        <div class="section-container">
+          <h2 class="section-title animate-on-scroll slide-in-left">
+            <span>Chi Sono</span>
+          </h2>
+          <div class="about-container">
+            <div class="profile-pic-container animate-on-scroll fade-in">
+              <img src="assets/profile.svg" alt="Foto Kirito" class="profile-pic">
+              <div class="profile-pic-outline"></div>
+            </div>
+            <div class="about-text animate-on-scroll slide-in-right">
+              <p>
+                Ciao! Sono Diego Vincenzi (online Kirito), studente al 4° anno di
+                Informatica all'IIS Copernico Carpeggiani (Ferrara). La tecnologia
+                è la mia più grande passione, dallo sviluppo software alla
+                gestione di infrastrutture.
+              </p>
+              <p>
+                Gestisco un server Proxmox personale come laboratorio per
+                sperimentare con VM, container, networking e servizi self-hosted.
+                Parallelamente, sono fondatore di <strong>GXE Devs</strong> e
+                Leader/Sherpa del clan <strong>GXE Republic</strong> su Destiny 2.
+              </p>
+              <p>
+                Attualmente sto espandendo le mie competenze nello sviluppo web moderno, 
+                lavorando a una <strong>dashboard Next.js</strong> per il mio clan di Destiny 2.
+                Questo progetto combina la mia passione per il gaming con lo sviluppo di applicazioni
+                web avanzate, utilizzando tecnologie come React, Next.js e Tailwind CSS.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Sezione Progetti -->
-      <section id="projects" class="content-section">
-        <h2 class="section-title animate-on-scroll slide-in-left">
-          <span>Progetti Principali</span>
-        </h2>
-        <div class="project-grid">
-          <!-- Card Progetto 1 -->
-          <div class="card project-card animate-on-scroll fade-in-up">
-            <div class="card-icon"><i class="fas fa-cogs"></i></div>
-            <h3>GXE Devs - Bot MQL5</h3>
-            <p>
-              Con
-              <a href="#" target="_blank" rel="noopener noreferrer"
-                >Artemie Fedoruc</a
-              >, sviluppo bot di trading automatico (MQL5) personalizzati per
-              clienti, con un modello basato su commissioni.
-            </p>
-            <!-- <a href="#" class="button">Dettagli (se esiste)</a> -->
-          </div>
+      <section id="projects" class="content-section with-gradient">
+        <div class="section-container">
+          <h2 class="section-title animate-on-scroll slide-in-left">
+            <span>Progetti Principali</span>
+          </h2>
+          <div class="project-grid stagger-fade-in animate-on-scroll">
+            <!-- Card Progetto 1 -->
+            <div class="card project-card card-hover-effect">
+              <div class="card-icon"><i class="fas fa-cogs skill-icon"></i></div>
+              <h3>GXE Devs - Bot MQL5</h3>
+              <p>
+                Con
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                  >Artemie Fedoruc</a
+                >, sviluppo bot di trading automatico (MQL5) personalizzati per
+                clienti, con un modello basato su commissioni.
+              </p>
+            </div>
 
-          <!-- Card Progetto 2 -->
-          <div
-            class="card project-card animate-on-scroll fade-in-up"
-            style="animation-delay: 0.2s"
-          >
-            <div class="card-icon"><i class="fas fa-server"></i></div>
-            <h3>Server Lab Proxmox</h3>
-            <p>
-              Il mio playground personale con Proxmox VE per testare Linux,
-              Docker, servizi di rete e automazione in un ambiente controllato.
-            </p>
-          </div>
+            <!-- Card Progetto 2 -->
+            <div class="card project-card card-hover-effect">
+              <div class="card-icon"><i class="fas fa-server skill-icon"></i></div>
+              <h3>Server Lab Proxmox</h3>
+              <p>
+                Il mio playground personale con Proxmox VE per testare Linux,
+                Docker, servizi di rete e automazione in un ambiente controllato.
+              </p>
+            </div>
 
-          <!-- Card Progetto 3 -->
-          <div
-            class="card project-card animate-on-scroll fade-in-up"
-            style="animation-delay: 0.4s"
-          >
-            <div class="card-icon"><i class="fab fa-discord"></i></div>
-            <!-- O un'icona di Destiny se preferisci -->
-            <h3>GXE Republic - Community</h3>
-            <p>
-              Leader e Sherpa nel clan Destiny 2 GXE Republic. Gestione
-              community, eventi in-game e server Discord. Ottima esperienza di
-              teamwork e leadership.
-            </p>
-            <!-- <a href="#" class="button">Discord</a> -->
+            <!-- Card Progetto 3 -->
+            <div class="card project-card card-hover-effect">
+              <div class="card-icon"><i class="fab fa-discord skill-icon"></i></div>
+              <h3>GXE Republic - Community</h3>
+              <p>
+                Leader e Sherpa nel clan Destiny 2 GXE Republic. Gestione
+                community, eventi in-game e server Discord. Ottima esperienza di
+                teamwork e leadership.
+              </p>
+            </div>
+            
+            <!-- Nuovo Progetto: GXE Dashboard -->
+            <div class="card project-card card-hover-effect">
+              <div class="card-icon"><i class="fab fa-react skill-icon"></i></div>
+              <h3>GXE Dashboard - Next.js</h3>
+              <p>
+                Una moderna dashboard web sviluppata con Next.js per il clan Destiny 2.
+                Include statistiche dei membri, calendario eventi, e gestione dell'attività
+                del clan con integrazione dell'API di Bungie.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Sezione Skills -->
       <section id="skills" class="content-section">
-        <h2 class="section-title animate-on-scroll slide-in-left">
-          <span>Competenze</span>
-        </h2>
-        <div class="skills-container">
-          <div
-            class="skill-category animate-on-scroll fade-in"
-            style="animation-delay: 0.1s"
-          >
-            <h4><i class="fas fa-code"></i> Linguaggi & Sviluppo</h4>
-            <ul>
-              <li>MQL5 (Trading Bots)</li>
-              <li>HTML, CSS, JavaScript</li>
-              <li>Python (Apprendimento)</li>
-              <!-- Aggiungi altri -->
-            </ul>
+        <div class="section-container">
+          <h2 class="section-title animate-on-scroll slide-in-left">
+            <span>Competenze</span>
+          </h2>
+          <div class="skills-container stagger-fade-in animate-on-scroll">
+            <div class="skill-category">
+              <h4><i class="fas fa-code skill-icon"></i> Linguaggi & Sviluppo</h4>
+              <ul>
+                <li>MQL5 (Trading Bots)</li>
+                <li>HTML, CSS, JavaScript</li>
+                <li>React & Next.js (Intermedio)</li>
+                <li>Tailwind CSS</li>
+                <li>Python (Base)</li>
+              </ul>
+              <div class="progress-bar" style="--progress-percent: 75%"></div>
+            </div>
+            <div class="skill-category">
+              <h4><i class="fas fa-layer-group skill-icon"></i> Sistemi & Infrastruttura</h4>
+              <ul>
+                <li>Linux (Debian, Ubuntu)</li>
+                <li>Proxmox VE (Virtualizzazione)</li>
+                <li>Docker / LXC (Container - Basi)</li>
+                <li>Networking (Basi TCP/IP, Firewall)</li>
+                <li>Git e GitHub</li>
+              </ul>
+              <div class="progress-bar" style="--progress-percent: 80%"></div>
+            </div>
+            <div class="skill-category">
+              <h4><i class="fas fa-users skill-icon"></i> Soft Skills & Altro</h4>
+              <ul>
+                <li>Gestione Community (Discord)</li>
+                <li>Problem Solving</li>
+                <li>Teamwork & Leadership (Clan)</li>
+                <li>Self-Learning Continuo</li>
+                <li>UI/UX Design (Base)</li>
+              </ul>
+              <div class="progress-bar" style="--progress-percent: 85%"></div>
+            </div>
           </div>
-          <div
-            class="skill-category animate-on-scroll fade-in"
-            style="animation-delay: 0.3s"
-          >
-            <h4><i class="fas fa-layer-group"></i> Sistemi & Infrastruttura</h4>
-            <ul>
-              <li>Linux (Debian, Ubuntu)</li>
-              <li>Proxmox VE (Virtualizzazione)</li>
-              <li>Docker / LXC (Container - Basi)</li>
-              <li>Networking (Basi TCP/IP, Firewall)</li>
-            </ul>
-          </div>
-          <div
-            class="skill-category animate-on-scroll fade-in"
-            style="animation-delay: 0.5s"
-          >
-            <h4><i class="fas fa-users"></i> Soft Skills & Altro</h4>
-            <ul>
-              <li>Gestione Community (Discord)</li>
-              <li>Problem Solving</li>
-              <li>Teamwork & Leadership (Clan)</li>
-              <li>Self-Learning Continuo</li>
-            </ul>
+        </div>
+      </section>
+      
+      <!-- Idee per il futuro - Sezione separata -->
+      <section id="future" class="content-section with-gradient">
+        <div class="section-container">
+          <h2 class="section-title animate-on-scroll slide-in-left">
+            <span>Idee Future</span>
+          </h2>
+          <div class="future-ideas animate-on-scroll fade-in">
+            <div class="ideas-grid">
+              <div class="idea-card">
+                <div class="idea-icon"><i class="fas fa-database"></i></div>
+                <h4>Full-Stack Development</h4>
+                <p>Approfondire React, Next.js e database per creare applicazioni web complete con autenticazione e dashboard personalizzate.</p>
+              </div>
+              <div class="idea-card">
+                <div class="idea-icon"><i class="fas fa-gamepad"></i></div>
+                <h4>Destiny 2 API Integration</h4>
+                <p>Creare un'app per il clan che sfrutti le API di Bungie per tracciare progressi, gestire eventi e fornire suggerimenti di gameplay.</p>
+              </div>
+              <div class="idea-card">
+                <div class="idea-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h4>Mobile App Development</h4>
+                <p>Espandere le competenze verso React Native per creare versioni mobile native delle dashboard web.</p>
+              </div>
+              <div class="idea-card">
+                <div class="idea-icon"><i class="fas fa-cloud"></i></div>
+                <h4>Cloud Infrastructure</h4>
+                <p>Approfondire AWS, Azure o Google Cloud per hostare applicazioni scalabili e implementare CI/CD per progetti personali e di team.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Sezione Contatti -->
       <section id="contact" class="content-section">
-        <h2 class="section-title animate-on-scroll slide-in-left">
-          <span>Mettiamoci in Contatto</span>
-        </h2>
-        <p
-          class="animate-on-scroll fade-in"
-          style="text-align: center; margin-bottom: 2rem"
-        >
-          Interessato a collaborare, chiedermi qualcosa o semplicemente fare due
-          chiacchiere?
-        </p>
-        <div class="contact-links animate-on-scroll fade-in-up">
-          <a
-            href="[IL TUO LINK GITHUB]"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="contact-button github"
-            ><i class="fab fa-github"></i> GitHub</a
+        <div class="section-container">
+          <h2 class="section-title animate-on-scroll slide-in-left">
+            <span>Mettiamoci in Contatto</span>
+          </h2>
+          <p
+            class="contact-intro animate-on-scroll fade-in"
+            style="text-align: center; margin-bottom: 2rem"
           >
-          <a href="mailto:[LA TUA EMAIL]" class="contact-button email"
-            ><i class="fas fa-envelope"></i> Email</a
-          >
-          <!-- <a href="[LINK LINKEDIN]" target="_blank" rel="noopener noreferrer" class="contact-button linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a> -->
-          <!-- <a href="#" class="contact-button discord"><i class="fab fa-discord"></i> Discord (IlTuo#1234)</a> -->
+            Interessato a collaborare, chiedermi qualcosa o semplicemente fare due
+            chiacchiere?
+          </p>
+          <div class="contact-links animate-on-scroll fade-in-up">
+            <a
+              href="https://github.com/KiritoGXE"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-button github"
+              ><i class="fab fa-github"></i> GitHub</a
+            >
+            <a href="mailto:vincenzi.die@gmail.com" class="contact-button email"
+              ><i class="fas fa-envelope"></i> Email</a
+            >
+            <a href="https://discord.gg/Enm3UbutEa" target="_blank" rel="noopener noreferrer" class="contact-button discord"><i class="fab fa-discord"></i> Discord</a>
+          </div>
         </div>
       </section>
 
       <footer>
         <p>
-          © <span id="year"></span> Diego "Kirito" Vincenzi. Creatività
+          © <span id="year"></span> Diego Vincenzi <span class="small-text">(Kirito)</span>. Creatività
           digitale.
         </p>
+        <div class="back-to-top">
+          <a href="#home" aria-label="Torna all'inizio">
+            <i class="fas fa-arrow-up"></i>
+          </a>
+        </div>
       </footer>
     </main>
 
+    <script src="js/particles.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
